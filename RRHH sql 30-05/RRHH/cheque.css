@@ -1,0 +1,55 @@
+﻿body {
+    background-color: beige;
+    font-family: Arial;
+}
+
+.chequeenc {
+    text-align: right;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.chequecue {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.nombrecli {
+    font-size: x-large;
+    text-transform: uppercase;
+}
+
+.chequepie {
+    color: red;
+    font-style: oblique;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.campo {
+    padding: 5px 2px;
+    margin: 0px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.etiqueta{
+    font-size: 20px;
+}
+
+.che_enc {
+    width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    font-family: 'Segoe UI';
+    font-size: 30px;
+}
+
+.cheque {
+    width: 650px;
+    margin: 0 auto;
+    border: 1px solid gray;
+}

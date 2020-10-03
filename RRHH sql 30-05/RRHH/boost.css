@@ -1,0 +1,76 @@
+﻿body {
+    margin:0;
+    padding:0;
+    
+}
+
+*{
+    font-family:'Bauhaus 93';
+}
+.button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+.container-fluid{
+    width:100vw;
+    height:100vh;
+    background-image:url('Imagenes/fondo-creativo-formas-geometricas-coloridas-abstractas_1035-17834.jpg');
+}
+
+.container-fluid .row a {
+        text-decoration:none;
+        font-size:3vw;
+        color:white;
+    }
+
+.container-fluid .btn {
+    float:right;
+    background-color:#fff568;
+    border:0;
+    color:black;
+    font-size:1.5vw;
+}
+   
+.cols1{
+    margin-top:22vh;
+}
+
+.col-6 input[type=text],input[type=password]{
+    margin-left:11vw;
+    width:37vw;
+    border:0;
+    border-bottom: 3px solid white;
+    border-left:3px solid white;
+    background-color:transparent;
+    padding-top:2vh;
+    color:white;
+    margin-top: 4vh;
+    font-size: 3vh;
+    padding-left:12vw;
+    padding-right:12vw;
+}
+
+input[type=text]::-webkit-input-placeholder{
+    color:white !important;
+    font-size:3vw;
+}
+
+input[type=password]::-webkit-input-placeholder{
+    color:white !important;
+    font-size:3vw;
+}
+
+.col-6 input[type=submit]{
+    color:black;
+    background-color:#fff568;
+    margin-left:24vw;
+    font-size:1.5vw;
+}
+
+
+

@@ -1,0 +1,479 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A28858B7-97B5-4130-8DE0-D8FB9F72E964}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RRHH</RootNamespace>
+    <AssemblyName>RRHH</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\..\..\Desktop\RRHH\EjemploPdf\EjemploPdf\bin\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Oracle.DataAccess, Version=2.112.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\app\Miguel\product\11.2.0\dbhome_1\ODP.NET\bin\2.x\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Archivos\admin.aspx" />
+    <Content Include="Archivos\BAJASX.aspx" />
+    <Content Include="Archivos\bono14.aspx" />
+    <Content Include="Archivos\BONO14X.aspx" />
+    <Content Include="Archivos\controldia.aspx" />
+    <Content Include="Archivos\ControlDiaMes.aspx" />
+    <Content Include="Archivos\controlhorasmes.aspx" />
+    <Content Include="Archivos\empleadoos.aspx" />
+    <Content Include="Archivos\INGCONTROLHORASMES.aspx" />
+    <Content Include="Archivos\PAGOAGUINALDOX.aspx" />
+    <Content Include="Archivos\VACACIONESX.aspx" />
+    <Content Include="Archivos\verbono14.aspx" />
+    <Content Include="Archivos\verdiames.aspx" />
+    <Content Include="Archivos\GestPrestacion.aspx" />
+    <Content Include="Archivos\GestRecurs.aspx" />
+    <Content Include="Archivos\IndDePro.aspx" />
+    <Content Include="Archivos\bajas.aspx" />
+    <Content Include="Archivos\nomina.aspx" />
+    <Content Include="Archivos\nuevoempleado.aspx" />
+    <Content Include="Archivos\nuevopuesto.aspx" />
+    <Content Include="Archivos\nuevousuario.aspx" />
+    <Content Include="Archivos\pagoaguinaldo.aspx" />
+    <Content Include="Archivos\PagoPlan.aspx" />
+    <Content Include="Archivos\Inicio.aspx" />
+    <Content Include="Archivos\Login2.aspx" />
+    <Content Include="Archivos\reportes.aspx" />
+    <Content Include="Archivos\vacaciones.aspx" />
+    <Content Include="Archivos\verbajas.aspx" />
+    <Content Include="Archivos\verdiamess.aspx" />
+    <Content Include="Archivos\verempleadoss.aspx" />
+    <Content Include="Archivos\verhorasmess.aspx" />
+    <Content Include="Archivos\vernomi.aspx" />
+    <Content Include="Archivos\verpagoaguinaldo.aspx" />
+    <Content Include="Archivos\VerPuestos.aspx" />
+    <Content Include="Archivos\VerUser.aspx" />
+    <Content Include="Archivos\vervacacioness.aspx" />
+    <Content Include="cheque.css" />
+    <Content Include="default.css" />
+    <Content Include="default2.css" />
+    <Content Include="estilos.css" />
+    <Content Include="fonts.css" />
+    <Content Include="Imagenes\44603165_m-edit-300x300.jpg" />
+    <Content Include="Imagenes\grh.jpg" />
+    <Content Include="Imagenes\IMAGEN-RAET-ok.jpg" />
+    <Content Include="Imagenes\Reportes-de-sustentabilidad-alineados-a-ODS.jpg" />
+    <Content Include="Imagenes\unnamed.jpg" />
+    <Content Include="img\img_fondos_MP.jpg" />
+    <Content Include="Imagenes\rol-departamento-RRHH-socio-consultor-interno.png" />
+    <Content Include="img\fondo-creativo-formas-geometricas-coloridas-abstractas_1035-17834.jpg" />
+    <Content Include="master.css" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Boostrap\bootstrap-grid.css.map" />
+    <Content Include="Boostrap\bootstrap-grid.min.css.map" />
+    <Content Include="Boostrap\bootstrap-reboot.css.map" />
+    <Content Include="Boostrap\bootstrap-reboot.min.css.map" />
+    <Content Include="Boostrap\bootstrap.css.map" />
+    <Content Include="Boostrap\bootstrap.min.css.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="boost.css" />
+    <Content Include="Boostrap\bootstrap-grid.css" />
+    <Content Include="Boostrap\bootstrap-grid.min.css" />
+    <Content Include="Boostrap\bootstrap-reboot.css" />
+    <Content Include="Boostrap\bootstrap-reboot.min.css" />
+    <Content Include="Boostrap\bootstrap.css" />
+    <Content Include="Boostrap\bootstrap.min.css" />
+    <Content Include="scripts\ai.0.22.9-build00167.js" />
+    <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Archivos\admin.aspx.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archivos\admin.aspx.designer.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\BAJASX.aspx.cs">
+      <DependentUpon>BAJASX.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archivos\BAJASX.aspx.designer.cs">
+      <DependentUpon>BAJASX.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\bono14.aspx.cs">
+      <DependentUpon>bono14.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archivos\bono14.aspx.designer.cs">
+      <DependentUpon>bono14.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\BONO14X.aspx.cs">
+      <DependentUpon>BONO14X.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archivos\BONO14X.aspx.designer.cs">
+      <DependentUpon>BONO14X.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\controldia.aspx.cs">
+      <DependentUpon>controldia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archivos\controldia.aspx.designer.cs">
+      <DependentUpon>controldia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\ControlDiaMes.aspx.cs">
+      <DependentUpon>ControlDiaMes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archivos\ControlDiaMes.aspx.designer.cs">
+      <DependentUpon>ControlDiaMes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\controlhorasmes.aspx.cs">
+      <DependentUpon>controlhorasmes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archivos\controlhorasmes.aspx.designer.cs">
+      <DependentUpon>controlhorasmes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\empleadoos.aspx.cs">
+      <DependentUpon>empleadoos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archivos\empleadoos.aspx.designer.cs">
+      <DependentUpon>empleadoos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\INGCONTROLHORASMES.aspx.cs">
+      <DependentUpon>INGCONTROLHORASMES.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archivos\INGCONTROLHORASMES.aspx.designer.cs">
+      <DependentUpon>INGCONTROLHORASMES.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\PAGOAGUINALDOX.aspx.cs">
+      <DependentUpon>PAGOAGUINALDOX.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archivos\PAGOAGUINALDOX.aspx.designer.cs">
+      <DependentUpon>PAGOAGUINALDOX.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\VACACIONESX.aspx.cs">
+      <DependentUpon>VACACIONESX.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archivos\VACACIONESX.aspx.designer.cs">
+      <DependentUpon>VACACIONESX.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\verbono14.aspx.cs">
+      <DependentUpon>verbono14.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archivos\verbono14.aspx.designer.cs">
+      <DependentUpon>verbono14.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\verdiames.aspx.cs">
+      <DependentUpon>verdiames.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archivos\verdiames.aspx.designer.cs">
+      <DependentUpon>verdiames.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\GestPrestacion.aspx.cs">
+      <DependentUpon>GestPrestacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archivos\GestPrestacion.aspx.designer.cs">
+      <DependentUpon>GestPrestacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\GestRecurs.aspx.cs">
+      <DependentUpon>GestRecurs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archivos\GestRecurs.aspx.designer.cs">
+      <DependentUpon>GestRecurs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\IndDePro.aspx.cs">
+      <DependentUpon>IndDePro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archivos\IndDePro.aspx.designer.cs">
+      <DependentUpon>IndDePro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\bajas.aspx.cs">
+      <DependentUpon>bajas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archivos\bajas.aspx.designer.cs">
+      <DependentUpon>bajas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\nomina.aspx.cs">
+      <DependentUpon>nomina.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archivos\nomina.aspx.designer.cs">
+      <DependentUpon>nomina.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\nuevoempleado.aspx.cs">
+      <DependentUpon>nuevoempleado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archivos\nuevoempleado.aspx.designer.cs">
+      <DependentUpon>nuevoempleado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\nuevopuesto.aspx.cs">
+      <DependentUpon>nuevopuesto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archivos\nuevopuesto.aspx.designer.cs">
+      <DependentUpon>nuevopuesto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\nuevousuario.aspx.cs">
+      <DependentUpon>nuevousuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archivos\nuevousuario.aspx.designer.cs">
+      <DependentUpon>nuevousuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\pagoaguinaldo.aspx.cs">
+      <DependentUpon>pagoaguinaldo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archivos\pagoaguinaldo.aspx.designer.cs">
+      <DependentUpon>pagoaguinaldo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\PagoPlan.aspx.cs">
+      <DependentUpon>PagoPlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archivos\PagoPlan.aspx.designer.cs">
+      <DependentUpon>PagoPlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\Inicio.aspx.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archivos\Inicio.aspx.designer.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\Login2.aspx.cs">
+      <DependentUpon>Login2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archivos\Login2.aspx.designer.cs">
+      <DependentUpon>Login2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\reportes.aspx.cs">
+      <DependentUpon>reportes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archivos\reportes.aspx.designer.cs">
+      <DependentUpon>reportes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\vacaciones.aspx.cs">
+      <DependentUpon>vacaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archivos\vacaciones.aspx.designer.cs">
+      <DependentUpon>vacaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\verbajas.aspx.cs">
+      <DependentUpon>verbajas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archivos\verbajas.aspx.designer.cs">
+      <DependentUpon>verbajas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\verdiamess.aspx.cs">
+      <DependentUpon>verdiamess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archivos\verdiamess.aspx.designer.cs">
+      <DependentUpon>verdiamess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\verempleadoss.aspx.cs">
+      <DependentUpon>verempleadoss.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archivos\verempleadoss.aspx.designer.cs">
+      <DependentUpon>verempleadoss.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\verhorasmess.aspx.cs">
+      <DependentUpon>verhorasmess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archivos\verhorasmess.aspx.designer.cs">
+      <DependentUpon>verhorasmess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\vernomi.aspx.cs">
+      <DependentUpon>vernomi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archivos\vernomi.aspx.designer.cs">
+      <DependentUpon>vernomi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\verpagoaguinaldo.aspx.cs">
+      <DependentUpon>verpagoaguinaldo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archivos\verpagoaguinaldo.aspx.designer.cs">
+      <DependentUpon>verpagoaguinaldo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\VerPuestos.aspx.cs">
+      <DependentUpon>VerPuestos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archivos\VerPuestos.aspx.designer.cs">
+      <DependentUpon>VerPuestos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\VerUser.aspx.cs">
+      <DependentUpon>VerUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archivos\VerUser.aspx.designer.cs">
+      <DependentUpon>VerUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Archivos\vervacacioness.aspx.cs">
+      <DependentUpon>vervacacioness.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Archivos\vervacacioness.aspx.designer.cs">
+      <DependentUpon>vervacacioness.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicio\conexion.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50716</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50716/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

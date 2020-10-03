@@ -1,0 +1,119 @@
+﻿/* Bordered form */
+
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+    padding: 12px 20px;
+    margin: 14px 0 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.box{
+    width: 20%;
+    right: 20%;
+    padding: 2px 4px;
+    margin: 2px 0;
+    text-align: center;
+}
+
+/* Set a style for all buttons */
+.button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 7px 10px;
+    margin: 2px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+    /* Add a hover effect for buttons */
+    button:hover {
+        opacity: 0.8;
+    }
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+img.avatar {
+    width: 10%;
+    border-radius: 50%;
+}
+
+/* Add padding to containers */
+div.container {
+    padding: 10px;
+    width: 325px;
+    margin-left: 469px;
+    margin-top: 6px;
+    text-align: center;
+    border-top-width: 10px;
+    border-right-width: 1em;
+    border-top-color: #2785b5;
+    height: 517px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+
+    .cancelbtn {
+        width: 100%;
+    }
+}
+
+.reg_enc {
+    text-align: left;
+    font-family: 'Segoe UI';
+    font-size: 50px;
+}
+
+.listado {
+    width: 100%;
+    padding: 6px 11px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.formulario{
+    /*width: 30% ;*/
+    text-align:center;
+    margin: 0 auto;
+}
+
+body{
+    text-align: center;
+  background-color: #E5EEFF;
+}
+
+.botons{
+    
+    height: 5px;       
+    margin-left: 2px;      
+}
